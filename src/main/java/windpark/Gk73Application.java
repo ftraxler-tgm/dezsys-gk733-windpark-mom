@@ -15,6 +15,7 @@ import org.springframework.jms.support.converter.MappingJackson2MessageConverter
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
 
+import windpark.model.Message;
 import windpark.model.WindengineMessage;
 
 @SpringBootApplication
@@ -48,6 +49,8 @@ public class Gk73Application {
         // Send a message with a POJO - the template reuse the message converter
         System.out.println("Sending a message.");
         jmsTemplate.convertAndSend("mailbox", new WindengineMessage("Hello Spencer"));
+        new Message().run();
+
     }
 
 }

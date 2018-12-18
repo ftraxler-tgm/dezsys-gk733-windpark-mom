@@ -1,14 +1,12 @@
 package windpark.mom;
 
-import javax.jms.Connection;
-import javax.jms.ConnectionFactory;
-import javax.jms.Destination;
-import javax.jms.MessageConsumer;
-import javax.jms.Session;
-import javax.jms.TextMessage;
+import javax.jms.*;
+
+import org.apache.activemq.command.ActiveMQTextMessage;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
+import windpark.model.WindengineData;
 import windpark.model.WindengineMessage;
 
 @Component
@@ -17,6 +15,14 @@ public class WindparkReceiver {
     @JmsListener(destination = "mailbox", containerFactory = "myFactory")
     public void receiveMessage(WindengineMessage message) {
         System.out.println("Received <" + message + ">");
+    }
+    @JmsListener(destination = "windengine",containerFactory = "myFactory")
+    public void windengineMessage(ActiveMQTextMessage data){
+        try {
+            System.out.println(data.getText());
+        } catch (JMSException e) {
+            e.printStackTrace();
+        }
     }
 
 }
