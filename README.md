@@ -6,7 +6,7 @@ Diese Übung soll die Funktionsweise und Implementierung von eine Message Orient
 
 Die Umsetzung basiert auf einem praxisnahen Beispiel einer Windkraftanalage. Ein Windkraftanalage (Windrad) ist immer Teil eines Verbunds, genannt Windpark. Jede Windkraftanlage beinhaltet einen Rechner, der die Daten der Windkraftanalage aufzeichnet und diese steuern kann. Die Daten werden als REST Schnittstelle in XML oder JSON zur Verfügung gestellt. Die Daten aller Windkraftanlagen eines Windparks werden von einem Parkrechner gesammelt und abgespeichert. Der Parkrechner kommuniziert mit dem Rechenzentrum in der Zentrale. Eine Zentrale kommuniziert mit mehreren Windparks und steuert diese.
 
-![Windpark](https://elearning.tgm.ac.at/draftfile.php/2668/user/draft/591886117/dezsys_windpark.png)
+![Windpark Architektur](https://elearning.tgm.ac.at/draftfile.php/2668/user/draft/584681179/dezsys_windpark.png)
 
 ## 1.1 Ziele  
 
@@ -66,7 +66,7 @@ Implementieren Sie die Windpark-Kommunikationsplattform mit Hilfe des Java Messa
 
 ## 1.6 Links & Dokumente
 
- *   Grundlagen Message Oriented Middleware: [Präsentation](https://elearning.tgm.ac.at/pluginfile.php/84683/mod_resource/content/2/dezsys_mom.pdf) 
+ *   Grundlagen Message Oriented Middleware: [Präsentation](https://elearning.tgm.ac.at/pluginfile.php/84683/mod_resource/content/2/dezsys_mom.pdf)
  *   Middleware: [Apache ActiveMQ Installationspaket](http://activemq.apache.org/activemq-5153-release.html)
  *   Apache ActiveMQ & JMS Tutorial: 
 		*   http://activemq.apache.org/index.html
