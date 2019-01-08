@@ -12,18 +12,18 @@ import windpark.model.WindengineMessage;
 @Component
 public class WindparkReceiver {
 
-    @JmsListener(destination = "mailbox", containerFactory = "myFactory")
+    /*@JmsListener(destination = "mailbox", containerFactory = "myFactory")
     public void receiveMessage(WindengineMessage message) {
         System.out.println("Received <" + message + ">");
-    }
-    @JmsListener(destination = "windengine",containerFactory = "myFactory")
+    }*/
+    /*@JmsListener(destination = "windengineRec",containerFactory = "myFactory")
     public void windengineMessage(ActiveMQTextMessage data){
         try {
             System.out.println(data.getText());
         } catch (JMSException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
 }
 	

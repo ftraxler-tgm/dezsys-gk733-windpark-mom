@@ -20,6 +20,7 @@ public class Message {
                 // Send a message with a POJO - the template reuse the message converter
                 System.out.println("Sending Windengine Data");
                 jmsTemplate.convertAndSend("windengine", data);
+                //jmsTemplate.convertAndSend("windengineRec", data);
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
