@@ -47,7 +47,7 @@ public class Gk73Application {
 
         JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
 
-        // Send a message with a POJO - the template reuse the message converter
+
 
         new Message().run();
 

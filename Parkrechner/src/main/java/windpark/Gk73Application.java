@@ -14,7 +14,6 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
-import windpark.parkrechner.Rechner;
 
 
 @SpringBootApplication
@@ -44,6 +43,7 @@ public class Gk73Application {
         ConfigurableApplicationContext context = SpringApplication.run(Gk73Application.class, args);
 
         JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
+
 
         // Send a message with a POJO - the template reuse the message converter
 
