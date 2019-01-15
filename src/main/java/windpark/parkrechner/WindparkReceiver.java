@@ -1,4 +1,4 @@
-package windpark.mom;
+package windpark.parkrechner;
 
 import javax.jms.*;
 
@@ -12,18 +12,23 @@ import windpark.model.WindengineMessage;
 @Component
 public class WindparkReceiver {
 
-    /*@JmsListener(destination = "mailbox", containerFactory = "myFactory")
-    public void receiveMessage(WindengineMessage message) {
-        System.out.println("Received <" + message + ">");
-    }*/
-    /*@JmsListener(destination = "windengineRec",containerFactory = "myFactory")
+    @JmsListener(destination = "windengine",containerFactory = "myFactory")
     public void windengineMessage(ActiveMQTextMessage data){
         try {
-            System.out.println(data.getText());
+            Thread.sleep(10000);
+            String m = data.getText();
+            System.out.println(m);
+            this.writeMessage(m);
         } catch (JMSException e) {
             e.printStackTrace();
+        }catch(InterruptedException ie){
+            ie.printStackTrace();
         }
-    }*/
+    }
+    public  synchronized void writeMessage(String message){
+
+
+    }
 
 }
 	

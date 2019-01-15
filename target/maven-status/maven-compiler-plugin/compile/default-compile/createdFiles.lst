@@ -1,6 +1,6 @@
 windpark\mom\WindengineSimulation.class
 windpark\model\WindengineData.class
 windpark\Gk73Application.class
+windpark\parkrechner\WindparkReceiver.class
 windpark\model\Message.class
 windpark\model\WindengineMessage.class
-windpark\mom\WindparkReceiver.class
