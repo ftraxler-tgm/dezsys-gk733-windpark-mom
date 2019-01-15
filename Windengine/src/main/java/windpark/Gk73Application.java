@@ -22,6 +22,7 @@ import windpark.model.WindengineMessage;
 @EnableJms
 public class Gk73Application {
 
+
     @Bean
     public JmsListenerContainerFactory<?> myFactory(ConnectionFactory connectionFactory,
                                                     DefaultJmsListenerContainerFactoryConfigurer configurer) {
@@ -41,14 +42,13 @@ public class Gk73Application {
     }
 
     public static void main(String[] args) {
-        /* Launch the application
+        //Launch the application
         ConfigurableApplicationContext context = SpringApplication.run(Gk73Application.class, args);
 
         JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
 
         // Send a message with a POJO - the template reuse the message converter
-        System.out.println("Sending a message.");
-        jmsTemplate.convertAndSend("mailbox", new WindengineMessage("Hello Spencer"));*/
+
         new Message().run();
 
     }
