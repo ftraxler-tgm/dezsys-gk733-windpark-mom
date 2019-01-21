@@ -8,6 +8,8 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 @Component
 public class WindparkReceiver {
@@ -28,32 +30,42 @@ public class WindparkReceiver {
 
     public synchronized void writeMessage(String message) {
         String content = message;
-        String path = "C:/Users/Traxl/Documents/GitHub/dezsys-gk733-windpark-mom-ftraxler-tgm/Parkrechner/src/main/java/windpark/parkrechner/";
-        String[] split = message.split(",", 2)[0].split("\"", 5);
 
-        File file = new File(path);
-
+        File file = new File("data.json");
         try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            String st;
-            int i=0;
-            while ((st = br.readLine()) != null) {
-                i++;
+            if(file.exists()) {
+                FileReader fr = new FileReader(file);
+                LineNumberReader lnr = new LineNumberReader(fr);
 
+                int linenumber = 0;
+
+                while (lnr.readLine() != null){
+                    linenumber++;
+                }
+                if(linenumber>=30){
+                    System.out.println("Delete");
+                    BufferedWriter writer = new BufferedWriter(new FileWriter("data.json"));
+                    writer.write("");
+                    writer.close();
+                }
+
+                System.out.println("Total number of lines : " + linenumber);
+
+                lnr.close();
+            }else{
+                System.out.println("File doesn't exists");
             }
-            if(i>=10){
-                file.delete();
-            }
+
         }catch (IOException e){
-            e.getStackTrace();
+            System.out.println(e.getMessage());
         }
-        try(FileWriter fw = new FileWriter(path+"data"+split[3]+".json", true);
+        try(FileWriter fw = new FileWriter(file, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw))
         {
             out.println(message);
         } catch (IOException e) {
-            System.out.println(e.getStackTrace());//exception handling left as an exercise for the reader
+            System.out.println(e.getMessage());//exception handling left as an exercise for the reader
         }
 
 
