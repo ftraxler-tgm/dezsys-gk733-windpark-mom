@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c4ff2c6-1fa5-40d9-9134-4e4fe9d29723" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_10_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__org_springframework_spring_web_5_0_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Parkrechner/src/main/java/windpark/parkrechner/ParkrechnerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Parkrechner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Parkrechner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Parkrechner/gk733_windpark_mom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Parkrechner/gk733_windpark_mom.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Parkrechner/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Parkrechner/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Parkrechner/src/main/java/windpark/parkrechner/WindparkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Parkrechner/src/main/java/windpark/parkrechner/WindparkReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Parkrechner/src/main/java/windpark/parkrechner/data49.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Parkrechner/target/classes/windpark/parkrechner/WindparkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Parkrechner/target/classes/windpark/parkrechner/WindparkReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Parkrechner/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Parkrechner/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Parkrechner/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Parkrechner/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parkrechner/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Parkrechner/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parkrechner/src/main/java/windpark/parkrechner/ParkrechnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Parkrechner/src/main/java/windpark/parkrechner/ParkrechnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parkrechner/target/classes/windpark/parkrechner/ParkrechnerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Parkrechner/target/classes/windpark/parkrechner/ParkrechnerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -236,12 +216,12 @@
       <workItem from="1547555033049" duration="2525000" />
       <workItem from="1547557657802" duration="8315000" />
       <workItem from="1547626877315" duration="58000" />
-      <workItem from="1548094784349" duration="2903000" />
+      <workItem from="1548094784349" duration="3740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28532000" />
+    <option name="totallyTimeSpent" value="29369000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

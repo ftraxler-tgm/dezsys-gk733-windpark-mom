@@ -34,7 +34,7 @@ public class ParkrechnerController {
 
     }
     public String getData(String id) {
-        File file = new File("data.json");
+        File file = new File("data.json");;
         if (file.exists()) {
             try {
 
@@ -43,9 +43,14 @@ public class ParkrechnerController {
                 String text;
                 do {
                     text = br.readLine();
-                    System.out.println(text);
-                    return text;
-
+                    System.out.println("ID: "+id);
+                    String[] textid= text.split("\"",5);
+                    System.out.println(text.split("\"",5)[3]);
+                    System.out.println(textid[3].equals(id));
+                    if(textid[3].equals(id)) {
+                        System.out.println(text);
+                        return text;
+                    }
                 } while (text != null);
 
 
@@ -54,7 +59,7 @@ public class ParkrechnerController {
             }
 
         }
-        return "PEnis";
+        return "{\"ERROR\":\"Windengine not found\"}";
     }
 
 
