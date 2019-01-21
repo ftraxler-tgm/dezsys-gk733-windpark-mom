@@ -4,6 +4,8 @@ import javax.jms.*;
 import javax.swing.*;
 
 import org.apache.activemq.command.ActiveMQTextMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
@@ -11,15 +13,20 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+
 @Component
 public class WindparkReceiver {
 
+    private static final Logger LOGGER =
+            LoggerFactory.getLogger(WindparkReceiver.class);
+
     @JmsListener(destination = "windengine", containerFactory = "myFactory")
     public void windengineMessage(ActiveMQTextMessage data) {
+
         try {
             Thread.sleep(100);
             String m = data.getText();
-            //System.out.println(m);
+            LOGGER.info("'subscriber1' received message='{}'", m);
             this.writeMessage(m);
         } catch (JMSException e) {
             e.printStackTrace();

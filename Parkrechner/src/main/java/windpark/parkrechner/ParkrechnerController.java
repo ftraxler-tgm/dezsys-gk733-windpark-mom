@@ -63,7 +63,7 @@ public class ParkrechnerController {
         }
         return "{\"ERROR\":\"Windengine not found\"}";
     }
-    @RequestMapping(value = "/parkrechner/all/json",produces = "application/json")
+    @RequestMapping(value = "/parkrechner/all",produces = "application/json")
     public String windengineDatas() {
         String all="[";
         String text1 = this.getData("35");

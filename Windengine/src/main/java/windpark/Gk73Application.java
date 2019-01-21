@@ -40,6 +40,7 @@ public class Gk73Application {
         converter.setTypeIdPropertyName("_type");
         return converter;
     }
+    
 
     public static void main(String[] args) {
         //Launch the application
@@ -52,5 +53,6 @@ public class Gk73Application {
         new Message().run();
 
     }
+
 
 }

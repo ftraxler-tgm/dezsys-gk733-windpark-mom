@@ -42,6 +42,7 @@ public class Gk73Application {
         // Launch the application
         ConfigurableApplicationContext context = SpringApplication.run(Gk73Application.class, args);
 
+
         JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
 
 
