@@ -49,7 +49,7 @@ public class WindparkReceiver {
                     writer.close();
                 }
 
-                System.out.println("Total number of lines : " + linenumber);
+                //System.out.println("Total number of lines : " + linenumber);
 
                 lnr.close();
             }else{

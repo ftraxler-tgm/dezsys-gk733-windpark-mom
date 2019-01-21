@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 @RestController
@@ -61,6 +63,27 @@ public class ParkrechnerController {
         }
         return "{\"ERROR\":\"Windengine not found\"}";
     }
+    @RequestMapping(value = "/parkrechner/all/json",produces = "application/json")
+    public String windengineDatas() {
+        String all="[";
+        String text1 = this.getData("35");
+        String text2 = this.getData("41");
+        System.out.println(text1);
+        System.out.println(text2);
+        for(int i=1;i<=50;i++){
+            String text = this.getData(""+i);
+            if(text.equals("{\"ERROR\":\"Windengine not found\"}")){
 
+            }else{
+                all+=text+",";
+            }
+        }
+        if(all.substring((all.length()-1),all.length()).equals(",")){
+            all = all.substring(0,(all.length()-2));
+        }
+        all+="}]";
+        System.out.println(all);
+        return all;
+    }
 
 }
