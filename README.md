@@ -73,7 +73,7 @@ Implementieren Sie die Windpark-Kommunikationsplattform mit Hilfe des Java Messa
 
  *   JMS Overview - Beschreiben Sie die wichtigsten JMS Klassen und deren Zusammenhang?
   *  ConnectionFactory
-  *  Connection
+      * erstellt eine Factory
   *  Session
   *  MessageProducer
   *  MessageConsumer
@@ -83,7 +83,26 @@ Implementieren Sie die Windpark-Kommunikationsplattform mit Hilfe des Java Messa
 
  *   Was versteht man unter einem lose gekoppelten verteilten System? Nennen Sie ein Beispiel dazu. Warum spricht man hier von lose?
 * Die Änderungen haben nur eine lokale Auswirkung weshalb es einfacher ist zu implementieren. Wenn ich einen Newsletter Subscriber. Weil der man nur empfängt und für sich selbst ist.
-
+## Implementierung
+Das Programm ist in zwei IntelliJ Projekte geteilt, Parkrechner und Windkraftanlage. Die Windkraftanlage ist so realisiert, dass sie alle 3 Sekunden vom Simulator erstellte Daten in die JMS Queue sendet. Der Parkrechner versucht alle eingehenden Daten in ein File zu schreiben.
+            try(FileWriter fw = new FileWriter(file, true);
+                  BufferedWriter bw = new BufferedWriter(fw);
+                  PrintWriter out = new PrintWriter(bw))
+              {
+                  out.println(message);
+              } catch (IOException e) {
+                  System.out.println(e.getMessage());//exception handling left as an exercise for the reader
+              } 100ms die Queue auszulesen und schreibt die Daten in ein File.
+              try(FileWriter fw = new FileWriter(file, true);
+                      BufferedWriter bw = new BufferedWriter(fw);
+                      PrintWriter out = new PrintWriter(bw))
+                  {
+                      out.println(message);
+                  } catch (IOException e) {
+                      System.out.println(e.getMessage());//exception handling left as an exercise for the reader
+                  }
+Das RequestMapping holt sich dann aus dem File die richtige Zeile heraus und return ein Json-Element.
+Das Logger Objekt überträgt als Info immer die gesendeten(Windkraftanlagen) und empfangenen(Parkrechner) Daten. Diese übergebenen Informationen werden in ein Log-File gespeichert.
 ## 1.6 Links & Dokumente
 
  *   Grundlagen Message Oriented Middleware: [Präsentation](https://elearning.tgm.ac.at/pluginfile.php/84683/mod_resource/content/2/dezsys_mom.pdf)
