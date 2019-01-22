@@ -42,11 +42,6 @@ public class Message {
         return latch;
     }
 
-    @JmsListener(destination = "${destination.topic}")
-    public void receive1(String message) {
-        LOGGER.info("'subscriber1' received message='{}'", message);
-        latch.countDown();
-    }
 
 
 }
