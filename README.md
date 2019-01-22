@@ -68,9 +68,15 @@ Implementieren Sie die Windpark-Kommunikationsplattform mit Hilfe des Java Messa
 * Der Sender wird blockiert solange bis es gebuffert und angekommen ist beim Reciver und er die Nachricht verarbeitete hat.  
  *   Beschreiben Sie die Funktionsweise einer JMS Queue?
 
- Jeder kann etwas hineinstecken und jeder kann etwas herausnehmen. Jeder ist lose gekoppelt niemand ist von irgendwem abhängig.
+  * Jeder kann etwas hineinstecken und jeder kann etwas herausnehmen. Jeder ist lose gekoppelt niemand ist von irgendwem abhängig.
+
 
  *   JMS Overview - Beschreiben Sie die wichtigsten JMS Klassen und deren Zusammenhang?
+  *  ConnectionFactory
+  *  Connection
+  *  Session
+  *  MessageProducer
+  *  MessageConsumer
 
  *   Beschreiben Sie die Funktionsweise eines JMS Topic?
 * Es gibt Publisher und Subscriber wenn man etwas published geht dies an alle Subscriber.
