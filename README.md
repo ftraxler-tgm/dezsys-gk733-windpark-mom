@@ -73,16 +73,19 @@ Implementieren Sie die Windpark-Kommunikationsplattform mit Hilfe des Java Messa
 
  *   JMS Overview - Beschreiben Sie die wichtigsten JMS Klassen und deren Zusammenhang?
   *  ConnectionFactory
-      * erstellt eine Factory
-  *  Session
-  *  MessageProducer
-  *  MessageConsumer
+      * ist ein Konfiguration einer Verbindung für den Client damit er eine Verbindung mit dem JMS Provider herstellen kann.
+  *  Connection
+      * ist eine aktive Client Connection zur seinem JMS Provider
+  *  Message
+      * Definiert den Message Kopf und gibt eine Rückmeldung für alle Messages
+  *  MessageListener
+      * wird verwendet um Asynchrone Nachrichten zu empfangenen. Benötig aber natürlich eine ConnectionFactory und eine Message
 
  *   Beschreiben Sie die Funktionsweise eines JMS Topic?
 * Es gibt Publisher und Subscriber wenn man etwas published geht dies an alle Subscriber.
 
  *   Was versteht man unter einem lose gekoppelten verteilten System? Nennen Sie ein Beispiel dazu. Warum spricht man hier von lose?
-* Die Änderungen haben nur eine lokale Auswirkung weshalb es einfacher ist zu implementieren. Wenn ich einen Newsletter Subscriber. Weil der man nur empfängt und für sich selbst ist.
+* Die Änderungen haben nur eine lokale Auswirkung weshalb es einfacher ist zu implementieren. Wenn ich einen Newsletter Subscriber. Weil der man nur empfängt und für sich selbst ist. Die Windkraftanlage arbeitet auch alleine sie muss kein Messages schicken.
 
 ## Implementierung
 Das Programm ist in zwei IntelliJ Projekte geteilt, Parkrechner und Windkraftanlage. Die Windkraftanlage ist so realisiert, dass sie alle 3 Sekunden vom Simulator erstellte Daten in die JMS Queue sendet.
