@@ -83,8 +83,14 @@ Implementieren Sie die Windpark-Kommunikationsplattform mit Hilfe des Java Messa
 
  *   Was versteht man unter einem lose gekoppelten verteilten System? Nennen Sie ein Beispiel dazu. Warum spricht man hier von lose?
 * Die Änderungen haben nur eine lokale Auswirkung weshalb es einfacher ist zu implementieren. Wenn ich einen Newsletter Subscriber. Weil der man nur empfängt und für sich selbst ist.
+
 ## Implementierung
-Das Programm ist in zwei IntelliJ Projekte geteilt, Parkrechner und Windkraftanlage. Die Windkraftanlage ist so realisiert, dass sie alle 3 Sekunden vom Simulator erstellte Daten in die JMS Queue sendet. Der Parkrechner versucht alle eingehenden Daten in ein File zu schreiben.
+Das Programm ist in zwei IntelliJ Projekte geteilt, Parkrechner und Windkraftanlage. Die Windkraftanlage ist so realisiert, dass sie alle 3 Sekunden vom Simulator erstellte Daten in die JMS Queue sendet.
+`{"windengineID":"19","timestamp":"2019-01-22 09:13:18.858","windspeed":58.64,"unitWindspeed":"kmH","temperature":19.39,"unitTemperature":"C","power":708.09,"unitPower":"kwH","blindpower":110.44,"unitBlindpower":"kwH","rotationspeed":159.53,"unitRotationspeed":"uM","bladeposition":16.0,"unitBladeposition":"grad"}`
+
+
+
+Der Parkrechner versucht alle eingehenden Daten in ein File zu schreiben.
             try(FileWriter fw = new FileWriter(file, true);
                   BufferedWriter bw = new BufferedWriter(fw);
                   PrintWriter out = new PrintWriter(bw))
@@ -101,8 +107,16 @@ Das Programm ist in zwei IntelliJ Projekte geteilt, Parkrechner und Windkraftanl
                   } catch (IOException e) {
                       System.out.println(e.getMessage());//exception handling left as an exercise for the reader
                   }
+
 Das RequestMapping holt sich dann aus dem File die richtige Zeile heraus und return ein Json-Element.
 Das Logger Objekt überträgt als Info immer die gesendeten(Windkraftanlagen) und empfangenen(Parkrechner) Daten. Diese übergebenen Informationen werden in ein Log-File gespeichert.
+
+Parkrechner
+`""2019-01-22 01:42:12 [DefaultMessageListenerContainer-1] INFO  w.parkrechner.WindparkReceiver - Windengine Data='{"windengineID":"11","timestamp":"2019-01-22 01:41:53.495","windspeed":0.6,"unitWindspeed":"kmH","temperature":21.19,"unitTemperature":"C","power":1485.08,"unitPower":"kwH","blindpower":42.31,"unitBlindpower":"kwH","rotationspeed":126.53,"unitRotationspeed":"uM","bladeposition":30.0,"unitBladeposition":"grad"}`
+
+Windkraftanlage
+`""2019-01-22 01:44:22 [main] INFO  windpark.model.Message - Windengine sending Data='Windengine Info: ID = 35, timestamp = 2019-01-22 01:44:22.275, windspeed = 30.680000'
+`
 ## 1.6 Links & Dokumente
 
  *   Grundlagen Message Oriented Middleware: [Präsentation](https://elearning.tgm.ac.at/pluginfile.php/84683/mod_resource/content/2/dezsys_mom.pdf)
