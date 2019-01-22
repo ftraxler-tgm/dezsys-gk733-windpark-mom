@@ -58,17 +58,31 @@ Implementieren Sie die Windpark-Kommunikationsplattform mit Hilfe des Java Messa
 
  *   Nennen Sie mindestens 4 Eigenschaften der Message Oriented Middleware?  
 
+  * Nachrichten werden in eine Queue gesendet.
+  * eine Asynchrone Kommunikation
+  * Die Kommunikation kann Minuten dauern
+  * Die Grund Idea ist Nachricht in die Queue schicken
+
  *   Was versteht man unter einer transienten und synchronen Kommunikation?
+* Bei der transienten Kommunikation werden die Nachrichten nur so lange gespeichert solang Sender und Reciver laufen.
+* Der Sender wird blockiert solange bis es gebuffert und angekommen ist beim Reciver und er die Nachricht verarbeitete hat.  
  *   Beschreiben Sie die Funktionsweise einer JMS Queue?
+
+ Jeder kann etwas hineinstecken und jeder kann etwas herausnehmen. Jeder ist lose gekoppelt niemand ist von irgendwem abhängig.
+
  *   JMS Overview - Beschreiben Sie die wichtigsten JMS Klassen und deren Zusammenhang?
+
  *   Beschreiben Sie die Funktionsweise eines JMS Topic?
+* Es gibt Publisher und Subscriber wenn man etwas published geht dies an alle Subscriber.
+
  *   Was versteht man unter einem lose gekoppelten verteilten System? Nennen Sie ein Beispiel dazu. Warum spricht man hier von lose?
+* Die Änderungen haben nur eine lokale Auswirkung weshalb es einfacher ist zu implementieren. Wenn ich einen Newsletter Subscriber. Weil der man nur empfängt und für sich selbst ist.
 
 ## 1.6 Links & Dokumente
 
  *   Grundlagen Message Oriented Middleware: [Präsentation](https://elearning.tgm.ac.at/pluginfile.php/84683/mod_resource/content/2/dezsys_mom.pdf)
  *   Middleware: [Apache ActiveMQ Installationspaket](http://activemq.apache.org/activemq-5153-release.html)
- *   Apache ActiveMQ & JMS Tutorial: 
+ *   Apache ActiveMQ & JMS Tutorial:
 		*   http://activemq.apache.org/index.html
 		*   http://www.academictutorials.com/jms/jms-introduction.asp
 		*   http://docs.oracle.com/javaee/1.4/tutorial/doc/JMS.html#wp84181
@@ -77,4 +91,3 @@ Implementieren Sie die Windpark-Kommunikationsplattform mit Hilfe des Java Messa
 		*   https://spring.io/guides/gs/messaging-jms/
 		*   https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-messaging.html
 		*   https://dzone.com/articles/using-jms-in-spring-boot-1
-

@@ -1,0 +1,100 @@
+"2019-01-22 01:43:53 [main] INFO  windpark.Gk73Application - Starting Gk73Application on Fabian-Traxler with PID 184304 (C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine\target\classes started by Traxl in C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine)
+""2019-01-22 01:43:53 [main] INFO  windpark.Gk73Application - No active profile set, falling back to default profiles: default
+""2019-01-22 01:43:53 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3c518d3d: startup date [Tue Jan 22 01:43:53 CET 2019]; root of context hierarchy
+""2019-01-22 01:43:55 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2019-01-22 01:43:55 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+""2019-01-22 01:43:55 [main] INFO  windpark.Gk73Application - Started Gk73Application in 2.499 seconds (JVM running for 8.643)
+""2019-01-22 01:43:55 [main] INFO  windpark.Gk73Application - Starting Gk73Application on Fabian-Traxler with PID 184304 (C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine\target\classes started by Traxl in C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine)
+""2019-01-22 01:43:55 [main] INFO  windpark.Gk73Application - No active profile set, falling back to default profiles: default
+""2019-01-22 01:43:55 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@a92b5df: startup date [Tue Jan 22 01:43:55 CET 2019]; root of context hierarchy
+""2019-01-22 01:43:55 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2019-01-22 01:43:55 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+""2019-01-22 01:43:55 [main] INFO  windpark.Gk73Application - Started Gk73Application in 0.277 seconds (JVM running for 8.926)
+""2019-01-22 01:43:56 [main] INFO  windpark.model.Message - Windengine sending Data='Windengine Info: ID = 35, timestamp = 2019-01-22 01:43:55.481, windspeed = 24.500000'
+""2019-01-22 01:43:59 [main] INFO  windpark.Gk73Application - Starting Gk73Application on Fabian-Traxler with PID 184304 (C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine\target\classes started by Traxl in C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine)
+""2019-01-22 01:43:59 [main] INFO  windpark.Gk73Application - No active profile set, falling back to default profiles: default
+""2019-01-22 01:43:59 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4c928a7b: startup date [Tue Jan 22 01:43:59 CET 2019]; root of context hierarchy
+""2019-01-22 01:43:59 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2019-01-22 01:43:59 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+""2019-01-22 01:43:59 [main] INFO  windpark.Gk73Application - Started Gk73Application in 0.247 seconds (JVM running for 12.515)
+""2019-01-22 01:43:59 [main] INFO  windpark.model.Message - Windengine sending Data='Windengine Info: ID = 35, timestamp = 2019-01-22 01:43:59.102, windspeed = 72.390000'
+""2019-01-22 01:44:02 [main] INFO  windpark.Gk73Application - Starting Gk73Application on Fabian-Traxler with PID 184304 (C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine\target\classes started by Traxl in C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine)
+""2019-01-22 01:44:02 [main] INFO  windpark.Gk73Application - No active profile set, falling back to default profiles: default
+""2019-01-22 01:44:02 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@39632cc5: startup date [Tue Jan 22 01:44:02 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:02 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2019-01-22 01:44:02 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+""2019-01-22 01:44:02 [main] INFO  windpark.Gk73Application - Started Gk73Application in 0.305 seconds (JVM running for 15.835)
+""2019-01-22 01:44:02 [main] INFO  windpark.model.Message - Windengine sending Data='Windengine Info: ID = 35, timestamp = 2019-01-22 01:44:02.364, windspeed = 17.080000'
+""2019-01-22 01:44:05 [main] INFO  windpark.Gk73Application - Starting Gk73Application on Fabian-Traxler with PID 184304 (C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine\target\classes started by Traxl in C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine)
+""2019-01-22 01:44:05 [main] INFO  windpark.Gk73Application - No active profile set, falling back to default profiles: default
+""2019-01-22 01:44:05 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3f1f89a1: startup date [Tue Jan 22 01:44:05 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:05 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2019-01-22 01:44:05 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+""2019-01-22 01:44:05 [main] INFO  windpark.Gk73Application - Started Gk73Application in 0.278 seconds (JVM running for 19.133)
+""2019-01-22 01:44:05 [main] INFO  windpark.model.Message - Windengine sending Data='Windengine Info: ID = 35, timestamp = 2019-01-22 01:44:05.687, windspeed = 79.160000'
+""2019-01-22 01:44:09 [main] INFO  windpark.Gk73Application - Starting Gk73Application on Fabian-Traxler with PID 184304 (C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine\target\classes started by Traxl in C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine)
+""2019-01-22 01:44:09 [main] INFO  windpark.Gk73Application - No active profile set, falling back to default profiles: default
+""2019-01-22 01:44:09 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3c9f963c: startup date [Tue Jan 22 01:44:09 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:09 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2019-01-22 01:44:09 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+""2019-01-22 01:44:09 [main] INFO  windpark.Gk73Application - Started Gk73Application in 0.224 seconds (JVM running for 22.372)
+""2019-01-22 01:44:09 [main] INFO  windpark.model.Message - Windengine sending Data='Windengine Info: ID = 35, timestamp = 2019-01-22 01:44:08.980, windspeed = 46.720000'
+""2019-01-22 01:44:12 [main] INFO  windpark.Gk73Application - Starting Gk73Application on Fabian-Traxler with PID 184304 (C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine\target\classes started by Traxl in C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine)
+""2019-01-22 01:44:12 [main] INFO  windpark.Gk73Application - No active profile set, falling back to default profiles: default
+""2019-01-22 01:44:12 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@219ddf6b: startup date [Tue Jan 22 01:44:12 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:12 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2019-01-22 01:44:12 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+""2019-01-22 01:44:12 [main] INFO  windpark.Gk73Application - Started Gk73Application in 0.328 seconds (JVM running for 25.714)
+""2019-01-22 01:44:12 [main] INFO  windpark.model.Message - Windengine sending Data='Windengine Info: ID = 35, timestamp = 2019-01-22 01:44:12.220, windspeed = 77.130000'
+""2019-01-22 01:44:15 [main] INFO  windpark.Gk73Application - Starting Gk73Application on Fabian-Traxler with PID 184304 (C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine\target\classes started by Traxl in C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine)
+""2019-01-22 01:44:15 [main] INFO  windpark.Gk73Application - No active profile set, falling back to default profiles: default
+""2019-01-22 01:44:15 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@22c47088: startup date [Tue Jan 22 01:44:15 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:15 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2019-01-22 01:44:15 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+""2019-01-22 01:44:15 [main] INFO  windpark.Gk73Application - Started Gk73Application in 0.226 seconds (JVM running for 28.966)
+""2019-01-22 01:44:15 [main] INFO  windpark.model.Message - Windengine sending Data='Windengine Info: ID = 35, timestamp = 2019-01-22 01:44:15.573, windspeed = 17.190000'
+""2019-01-22 01:44:18 [main] INFO  windpark.Gk73Application - Starting Gk73Application on Fabian-Traxler with PID 184304 (C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine\target\classes started by Traxl in C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine)
+""2019-01-22 01:44:18 [main] INFO  windpark.Gk73Application - No active profile set, falling back to default profiles: default
+""2019-01-22 01:44:18 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2a69e7de: startup date [Tue Jan 22 01:44:18 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:19 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2019-01-22 01:44:19 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+""2019-01-22 01:44:19 [main] INFO  windpark.Gk73Application - Started Gk73Application in 0.423 seconds (JVM running for 32.418)
+""2019-01-22 01:44:19 [main] INFO  windpark.model.Message - Windengine sending Data='Windengine Info: ID = 35, timestamp = 2019-01-22 01:44:18.828, windspeed = 17.580000'
+""2019-01-22 01:44:22 [main] INFO  windpark.Gk73Application - Starting Gk73Application on Fabian-Traxler with PID 184304 (C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine\target\classes started by Traxl in C:\Users\Traxl\Documents\GitHub\dezsys-gk733-windpark-mom-ftraxler-tgm\Windengine)
+""2019-01-22 01:44:22 [main] INFO  windpark.Gk73Application - No active profile set, falling back to default profiles: default
+""2019-01-22 01:44:22 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@102f552d: startup date [Tue Jan 22 01:44:22 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:22 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2019-01-22 01:44:22 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+""2019-01-22 01:44:22 [main] INFO  windpark.Gk73Application - Started Gk73Application in 0.201 seconds (JVM running for 35.643)
+""2019-01-22 01:44:22 [main] INFO  windpark.model.Message - Windengine sending Data='Windengine Info: ID = 35, timestamp = 2019-01-22 01:44:22.275, windspeed = 30.680000'
+""2019-01-22 01:44:24 [Thread-3] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3c518d3d: startup date [Tue Jan 22 01:43:53 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:24 [Thread-9] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4c928a7b: startup date [Tue Jan 22 01:43:59 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:24 [Thread-37] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@102f552d: startup date [Tue Jan 22 01:44:22 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:24 [Thread-21] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3c9f963c: startup date [Tue Jan 22 01:44:09 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:24 [Thread-5] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@a92b5df: startup date [Tue Jan 22 01:43:55 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:24 [Thread-25] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@219ddf6b: startup date [Tue Jan 22 01:44:12 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:24 [Thread-17] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3f1f89a1: startup date [Tue Jan 22 01:44:05 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:24 [Thread-33] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@2a69e7de: startup date [Tue Jan 22 01:44:18 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:24 [Thread-29] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@22c47088: startup date [Tue Jan 22 01:44:15 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:24 [Thread-13] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@39632cc5: startup date [Tue Jan 22 01:44:02 CET 2019]; root of context hierarchy
+""2019-01-22 01:44:24 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+""2019-01-22 01:44:24 [Thread-13] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+""2019-01-22 01:44:24 [Thread-33] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+""2019-01-22 01:44:24 [Thread-29] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+""2019-01-22 01:44:24 [Thread-17] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+""2019-01-22 01:44:24 [Thread-25] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+""2019-01-22 01:44:24 [Thread-9] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+""2019-01-22 01:44:24 [Thread-37] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+""2019-01-22 01:44:24 [Thread-3] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+""2019-01-22 01:44:24 [Thread-21] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+""2019-01-22 01:44:24 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+""2019-01-22 01:44:24 [Thread-17] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+""2019-01-22 01:44:24 [Thread-25] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+""2019-01-22 01:44:24 [Thread-13] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+""2019-01-22 01:44:24 [Thread-33] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+""2019-01-22 01:44:24 [Thread-29] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+""2019-01-22 01:44:24 [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+""2019-01-22 01:44:24 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+""2019-01-22 01:44:24 [Thread-21] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+""2019-01-22 01:44:24 [Thread-37] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+"

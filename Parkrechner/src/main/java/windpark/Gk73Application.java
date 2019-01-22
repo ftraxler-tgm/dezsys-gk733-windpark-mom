@@ -2,14 +2,18 @@ package windpark;
 
 import javax.jms.ConnectionFactory;
 
+import org.apache.activemq.ActiveMQConnectionFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.config.JmsListenerContainerFactory;
+import org.springframework.jms.connection.CachingConnectionFactory;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
 import org.springframework.jms.support.converter.MessageConverter;
@@ -20,7 +24,25 @@ import org.springframework.jms.support.converter.MessageType;
 @EnableJms
 public class Gk73Application {
 
+
+    /**
+    @Value("${spring.activemq.broker-url}")
+    private String brokerUrl;
+
+
     @Bean
+    public ActiveMQConnectionFactory senderActiveMQConnectionFactory() {
+        ActiveMQConnectionFactory activeMQConnectionFactory =
+                new ActiveMQConnectionFactory();
+        activeMQConnectionFactory.setBrokerURL(brokerUrl);
+
+        return activeMQConnectionFactory;
+    }
+
+
+    */
+    @Primary
+    @Bean (name = "myFactory")
     public JmsListenerContainerFactory<?> myFactory(ConnectionFactory connectionFactory,
                                                     DefaultJmsListenerContainerFactoryConfigurer configurer) {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
@@ -29,8 +51,8 @@ public class Gk73Application {
         // You could still override some of Boot's default if necessary.
         return factory;
     }
-
-    @Bean // Serialize message content to json using TextMessage
+    @Primary
+    @Bean(name="queueJ")// Serialize message content to json using TextMessage
     public MessageConverter jacksonJmsMessageConverter() {
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
         converter.setTargetType(MessageType.TEXT);

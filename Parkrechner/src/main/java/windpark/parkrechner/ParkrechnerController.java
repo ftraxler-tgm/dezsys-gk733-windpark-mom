@@ -1,5 +1,7 @@
 package windpark.parkrechner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -16,6 +18,9 @@ import java.util.List;
 
 @RestController
 public class ParkrechnerController {
+
+    private static final Logger LOGGER =
+            LoggerFactory.getLogger(WindparkReceiver.class);
 
     @RequestMapping("/parkrechner")
     public String windengineMain() {
@@ -45,10 +50,10 @@ public class ParkrechnerController {
                 String text;
                 do {
                     text = br.readLine();
-                    System.out.println("ID: "+id);
+                    //System.out.println("ID: "+id);
                     String[] textid= text.split("\"",5);
-                    System.out.println(text.split("\"",5)[3]);
-                    System.out.println(textid[3].equals(id));
+                    //System.out.println(text.split("\"",5)[3]);
+                    //System.out.println(textid[3].equals(id));
                     if(textid[3].equals(id)) {
                         System.out.println(text);
                         return text;
@@ -68,8 +73,7 @@ public class ParkrechnerController {
         String all="[";
         String text1 = this.getData("35");
         String text2 = this.getData("41");
-        System.out.println(text1);
-        System.out.println(text2);
+
         for(int i=1;i<=50;i++){
             String text = this.getData(""+i);
             if(text.equals("{\"ERROR\":\"Windengine not found\"}")){
@@ -82,7 +86,6 @@ public class ParkrechnerController {
             all = all.substring(0,(all.length()-2));
         }
         all+="}]";
-        System.out.println(all);
         return all;
     }
 

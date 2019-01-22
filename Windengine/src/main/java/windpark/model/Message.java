@@ -4,11 +4,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
 import windpark.Gk73Application;
 import windpark.mom.WindengineSimulation;
 
 import java.util.Random;
+import java.util.concurrent.CountDownLatch;
 
 public class Message {
 
@@ -25,9 +27,8 @@ public class Message {
                 JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
 
                 // Send a message with a POJO - the template reuse the message converter
-                System.out.println("Sending Windengine Data from "+id);
                 jmsTemplate.convertAndSend("windengine", data);
-                LOGGER.info("'subscriber1' send message='{}'", data);
+                LOGGER.info("Windengine sending Data='{}'", data.toString());
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -35,4 +36,17 @@ public class Message {
 
         }
     }
+    private CountDownLatch latch = new CountDownLatch(2);
+
+    public CountDownLatch getLatch() {
+        return latch;
+    }
+
+    @JmsListener(destination = "${destination.topic}")
+    public void receive1(String message) {
+        LOGGER.info("'subscriber1' received message='{}'", message);
+        latch.countDown();
+    }
+
+
 }

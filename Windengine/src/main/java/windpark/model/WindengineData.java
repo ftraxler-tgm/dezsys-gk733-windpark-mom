@@ -139,7 +139,7 @@ public class WindengineData {
 	 */
 	@Override
 	public String toString() {
-		String info = String.format("Windengine Info: ID = %s, timestamp = %s, windspeed = %d", 
+		String info = String.format("Windengine Info: ID = %s, timestamp = %s, windspeed = %f",
 			windengineID, timestamp, windspeed );
 		return info;
 	}

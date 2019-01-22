@@ -6,17 +6,20 @@ import javax.swing.*;
 import org.apache.activemq.command.ActiveMQTextMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
+import windpark.Gk73Application;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
+
 
 
 @Component
 public class WindparkReceiver {
 
+    @Autowired
+    private Gk73Application sender;
     private static final Logger LOGGER =
             LoggerFactory.getLogger(WindparkReceiver.class);
 
@@ -26,7 +29,7 @@ public class WindparkReceiver {
         try {
             Thread.sleep(100);
             String m = data.getText();
-            LOGGER.info("'subscriber1' received message='{}'", m);
+            LOGGER.info("Windengine Data='{}'", m);
             this.writeMessage(m);
         } catch (JMSException e) {
             e.printStackTrace();

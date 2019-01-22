@@ -2,27 +2,50 @@ package windpark;
 
 import javax.jms.ConnectionFactory;
 
+import org.apache.activemq.ActiveMQConnectionFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.config.JmsListenerContainerFactory;
-import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
 
 import windpark.model.Message;
-import windpark.model.WindengineMessage;
 
 @SpringBootApplication
 @EnableJms
 public class Gk73Application {
 
 
+    @Value("${spring.activemq.broker-url}")
+    private String brokerUrl;
+
+    @Bean
+    public ActiveMQConnectionFactory receiverActiveMQConnectionFactory() {
+        ActiveMQConnectionFactory activeMQConnectionFactory =
+                new ActiveMQConnectionFactory();
+        activeMQConnectionFactory.setBrokerURL(brokerUrl);
+
+        return activeMQConnectionFactory;
+    }
+
+    @Bean
+    public DefaultJmsListenerContainerFactory jmsListenerContainerFactory() {
+        DefaultJmsListenerContainerFactory factory =
+                new DefaultJmsListenerContainerFactory();
+        factory
+                .setConnectionFactory(receiverActiveMQConnectionFactory());
+        factory.setPubSubDomain(true);
+
+        return factory;
+    }
     @Bean
     public JmsListenerContainerFactory<?> myFactory(ConnectionFactory connectionFactory,
                                                     DefaultJmsListenerContainerFactoryConfigurer configurer) {
@@ -32,7 +55,6 @@ public class Gk73Application {
         // You could still override some of Boot's default if necessary.
         return factory;
     }
-
     @Bean // Serialize message content to json using TextMessage
     public MessageConverter jacksonJmsMessageConverter() {
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
@@ -40,18 +62,13 @@ public class Gk73Application {
         converter.setTypeIdPropertyName("_type");
         return converter;
     }
-    
 
     public static void main(String[] args) {
         //Launch the application
         ConfigurableApplicationContext context = SpringApplication.run(Gk73Application.class, args);
 
-        JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
-
-
 
         new Message().run();
-
     }
 
 
