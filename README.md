@@ -94,6 +94,7 @@ Das Programm ist in zwei IntelliJ Projekte geteilt, Parkrechner und Windkraftanl
 
 
 Der Parkrechner versucht alle eingehenden Daten in ein File zu schreiben.
+
             try(FileWriter fw = new FileWriter(file, true);
                   BufferedWriter bw = new BufferedWriter(fw);
                   PrintWriter out = new PrintWriter(bw))
