@@ -4,6 +4,8 @@ import javax.jms.*;
 import javax.swing.*;
 
 import org.apache.activemq.command.ActiveMQTextMessage;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,7 @@ import java.io.*;
 @Component
 public class WindparkReceiver {
 
+    public static String pid="01";
     @Autowired
     private Gk73Application sender;
     private static final Logger LOGGER =
@@ -29,6 +32,12 @@ public class WindparkReceiver {
         try {
             Thread.sleep(100);
             String m = data.getText();
+
+            m = m.substring(0,m.length()-1);
+
+            m+=",\"parkrechnerId\":\""+pid+"\"}";
+
+
             LOGGER.info("Windengine Data='{}'", m);
             this.writeMessage(m);
         } catch (JMSException e) {
@@ -52,14 +61,14 @@ public class WindparkReceiver {
                 while (lnr.readLine() != null){
                     linenumber++;
                 }
-                if(linenumber>=30){
+                if(linenumber>=8){
                     System.out.println("Delete");
                     BufferedWriter writer = new BufferedWriter(new FileWriter("data.json"));
                     writer.write("");
                     writer.close();
                 }
 
-                System.out.println("Total number of lines : " + linenumber);
+                //System.out.println("Total number of lines : " + linenumber);
 
                 lnr.close();
             }else{
@@ -69,14 +78,36 @@ public class WindparkReceiver {
         }catch (IOException e){
             System.out.println(e.getMessage());
         }
-        try(FileWriter fw = new FileWriter(file, true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter out = new PrintWriter(bw))
-        {
-            out.println(message);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());//exception handling left as an exercise for the reader
+
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(file));
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+
+            while (line != null) {
+                sb.append(line);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+            }
+            String everything = sb.toString();
+            try(FileWriter fw = new FileWriter(file);
+                BufferedWriter bw = new BufferedWriter(fw);
+                PrintWriter out = new PrintWriter(bw))
+            {
+                message+="\n"+everything;
+
+                out.println(message);
+
+            } catch (IOException e) {
+                System.out.println(e.getMessage());//exception handling left as an exercise for the reader
+            }
+
+
+        } catch (Exception e){
+            e.getStackTrace();
         }
+
 
 
 

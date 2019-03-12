@@ -1,5 +1,5 @@
-windpark\model\Message.class
-windpark\mom\WindengineSimulation.class
-windpark\model\WindengineData.class
-windpark\Gk73Application.class
-windpark\model\WindengineMessage.class
+windpark/mom/WindengineSimulation.class
+windpark/model/WindengineMessage.class
+windpark/model/Message.class
+windpark/Gk73Application.class
+windpark/model/WindengineData.class
