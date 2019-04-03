@@ -20,7 +20,7 @@ import java.io.*;
 @Component
 public class WindparkReceiver {
 
-    public static String pid="01";
+    public static final String pid="08";
     @Autowired
     private Gk73Application sender;
     private static final Logger LOGGER =
@@ -28,6 +28,7 @@ public class WindparkReceiver {
 
     @JmsListener(destination = "windengine", containerFactory = "myFactory")
     public void windengineMessage(ActiveMQTextMessage data) {
+
 
         try {
             Thread.sleep(100);

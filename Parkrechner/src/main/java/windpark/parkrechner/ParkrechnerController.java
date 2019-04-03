@@ -19,8 +19,13 @@ import java.util.List;
 @RestController
 public class ParkrechnerController {
 
+
+    public static final String pid="08";
+
+
     private static final Logger LOGGER =
             LoggerFactory.getLogger(WindparkReceiver.class);
+
 
     @RequestMapping("/parkrechner")
     public String windengineMain() {
@@ -68,7 +73,7 @@ public class ParkrechnerController {
         }
         return "{\"ERROR\":\"Windengine not found\"}";
     }
-    @RequestMapping(value = "/parkrechner/all",produces = "application/json")
+    @RequestMapping(value = "/parkrechner"+pid+"/all",produces = "application/json")
     public String windengineDatas() {
         String all="[";
         String text1 = this.getData("35");
@@ -88,5 +93,7 @@ public class ParkrechnerController {
         all+="}]";
         return all;
     }
+
+
 
 }
